@@ -1,3 +1,62 @@
+/* open-sans-300 - latin_cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/open-sans-v27-latin_cyrillic-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/open-sans-v27-latin_cyrillic-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/open-sans-v27-latin_cyrillic-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/open-sans-v27-latin_cyrillic-300.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/open-sans-v27-latin_cyrillic-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/open-sans-v27-latin_cyrillic-300.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v27-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/open-sans-v27-latin_cyrillic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/open-sans-v27-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/open-sans-v27-latin_cyrillic-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("../fonts/open-sans-v27-latin_cyrillic-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/open-sans-v27-latin_cyrillic-regular.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+/* open-sans-600 - latin_cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v27-latin_cyrillic-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/open-sans-v27-latin_cyrillic-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/open-sans-v27-latin_cyrillic-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/open-sans-v27-latin_cyrillic-600.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/open-sans-v27-latin_cyrillic-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/open-sans-v27-latin_cyrillic-600.svg#OpenSans")
+      format("svg"); /* Legacy iOS */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +76,7 @@ img {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -29,17 +88,22 @@ html {
 
 .btn {
   display: inline-block;
-  padding: 15px 16px;
+  padding: 15px 30px;
   font-size: 12px;
   line-height: 1;
+  font-weight: 600;
   color: white;
   background: #3172b9;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.btn.btn-big {
+  padding: 20px 60px;
+}
+
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /*********************** Header ***********************/
@@ -51,15 +115,26 @@ html {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
-}
-
-.logo {
-  margin-right: auto;
 }
 
 .nav-list {
   display: flex;
+  margin: auto;
+}
+
+.nav-item {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.nav-link {
+  color: #1c1c1c;
+}
+
+.nav-item.is-active .nav-link {
+  color: #3172b9;
 }
 
 .nav-item:not(:last-child) {
@@ -67,12 +142,17 @@ html {
 }
 
 .header-btn {
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
 /*********************** Header END ***********************/
 
 /*********************** Hero ***********************/
+
+.section-hero {
+  background: url("../img/hero.jpg") right center no-repeat white;
+  background-size: contain;
+}
 
 .hero-container {
   padding-top: 120px;
@@ -84,15 +164,45 @@ html {
 }
 
 .section-hero-heading {
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 300;
+  color: #1c1c1c;
+}
+
+.section-hero-action {
+  display: inline-block;
 }
 
 .section-hero-description {
   margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #757575;
 }
 
 .section-hero-btn-description {
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #787878;
+}
+
+.section-hero-ssl-icon {
+  display: inline-block;
+  margin-right: 10px;
+  width: 13px;
+  height: 17px;
+  background: url("/img/shield-icon.png") center center no-repeat transparent;
+  background-size: contain;
+  transform: translateY(-2px);
 }
 
 /*********************** Hero END ***********************/
@@ -100,25 +210,25 @@ html {
 /*********************** What We Do ***********************/
 
 .section-do {
-    padding-top: 140px;
-    padding-bottom: 100px;
+  padding-top: 140px;
+  padding-bottom: 100px;
 }
 
 .section-description {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .section-do-list {
-    display: flex;
-    padding-top: 50px;
+  display: flex;
+  padding-top: 50px;
 }
 
 .section-do-item {
-    flex: 1 1 25%;
+  flex: 1 1 25%;
 }
 
 .section-do-item:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 /*********************** What We Do END ***********************/
@@ -126,33 +236,33 @@ html {
 /*********************** Section Clients ***********************/
 
 .section-clients {
-    padding-top: 90px;
-    padding-bottom: 100px;
+  padding-top: 90px;
+  padding-bottom: 100px;
 }
 
 .section-clients-list {
-    display: flex;
+  display: flex;
 }
 
 .section-clients-item {
-    flex: 1 1 33.33%;
+  flex: 1 1 33.33%;
 }
 
 .section-clients-item:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .section-clients-user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .section-clients-avatar {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-    border: 2px solid #3179b9;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border: 2px solid #3179b9;
+  border-radius: 50%;
 }
 
 /*********************** Section Clients END ***********************/
@@ -160,48 +270,48 @@ html {
 /*********************** Contacts ***********************/
 
 .section-contacts {
-    padding-top: 85px;
-    padding-bottom: 95px;
-} 
+  padding-top: 85px;
+  padding-bottom: 95px;
+}
 
 .section-contacts-list {
-    display: flex;
-    margin-top: 43px;
+  display: flex;
+  margin-top: 43px;
 }
 
 .section-contacts-item {
-    flex: 1 1 33.33%;
+  flex: 1 1 33.33%;
 }
 
 .section-contacts-info {
-    min-width: 250px;
+  min-width: 250px;
 }
 
 .section-contacts-icon {
-    display: block;
-    height: 26px;
-    margin-bottom: 25px;
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: auto 100%;
-    background-color: transparent;
+  display: block;
+  height: 26px;
+  margin-bottom: 25px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: auto 100%;
+  background-color: transparent;
 }
 
 .section-contacts-icon-gps {
-    background-image: url('/img/gps.png');
+  background-image: url("/img/gps.png");
 }
 
 .section-contacts-icon-phone {
-    background-image: url('/img/phone.png');
+  background-image: url("/img/phone.png");
 }
 
 .section-contacts-icon-mail {
-    background-image: url('/img/mail.png');
+  background-image: url("/img/mail.png");
 }
 
 .section-contacts-heading {
-    display: block;
-    margin-bottom: 40px;
+  display: block;
+  margin-bottom: 40px;
 }
 
 /*********************** Contacts END ***********************/
@@ -209,30 +319,30 @@ html {
 /*********************** Footer ***********************/
 
 .footer {
-    height: 125px;
+  height: 125px;
 }
 
 .footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footer-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer-logo {
-    margin-right: 25px;
+  margin-right: 25px;
 }
 
 .footer-nav-list {
-    display: flex;
+  display: flex;
 }
 
 .footer-nav-item:not(:last-child) {
-    margin-right: 35px;
+  margin-right: 35px;
 }
 /*********************** Footer END ***********************/
