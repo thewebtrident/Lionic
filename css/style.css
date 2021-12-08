@@ -202,7 +202,7 @@ html {
   height: 17px;
   background: url("/img/shield-icon.png") center center no-repeat transparent;
   background-size: contain;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 /*********************** Hero END ***********************/
@@ -212,10 +212,23 @@ html {
 .section-do {
   padding-top: 140px;
   padding-bottom: 100px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #434343;
 }
 
 .section-description {
-  margin-top: 25px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #787878;
 }
 
 .section-do-list {
@@ -225,10 +238,37 @@ html {
 
 .section-do-item {
   flex: 1 1 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  padding: 60px 30px;
 }
 
 .section-do-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.section-do-icon {
+  margin-bottom: 30px;
+}
+
+.section-do-item-heading {
+  margin-bottom: 18px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.section-do-item-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+  margin-top: 0;
+  color: #787878;
 }
 
 /*********************** What We Do END ***********************/
@@ -238,6 +278,11 @@ html {
 .section-clients {
   padding-top: 90px;
   padding-bottom: 100px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.section-clients-heading {
+  margin-bottom: 45px;
 }
 
 .section-clients-list {
@@ -245,7 +290,22 @@ html {
 }
 
 .section-clients-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1 1 33.33%;
+  padding: 50px 35px 30px;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+}
+
+.section-clients-testimonial {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #787878;
 }
 
 .section-clients-item:not(:last-child) {
@@ -255,6 +315,8 @@ html {
 .section-clients-user {
   display: flex;
   align-items: center;
+  border-top: 1px solid #e9e9e9;
+  padding-top: 28px;
 }
 
 .section-clients-avatar {
@@ -263,6 +325,20 @@ html {
   margin-right: 15px;
   border: 2px solid #3179b9;
   border-radius: 50%;
+}
+
+.section-clients-username {
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.section-clients-user-description {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #787878;
 }
 
 /*********************** Section Clients END ***********************/
